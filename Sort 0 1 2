@@ -1,0 +1,23 @@
+#include <bits/stdc++.h> 
+void sort012(int *nums, int n)
+{
+   int i=0,left=0,right=n-1;
+   while(i<=right)
+   {
+      if(nums[i]==1)
+         i++;
+      else if(nums[i]==0)
+      {
+         swap(nums[i],nums[left]);
+         left++;
+         i++;
+      }
+      else
+      {
+         swap(nums[i],nums[right]);
+         right--;
+      }
+   }
+  
+   //   Write your code here
+}
